@@ -1,12 +1,14 @@
-# Faden - Modern eCommerce Website
+# Faden.com - Fashion Brand eCommerce Website
 
-A modern, responsive eCommerce product showcase website built with React, Tailwind CSS, and Vite. Features a clean, minimal design inspired by Apple and Shopify with dark mode support.
+A sophisticated fashion brand eCommerce website featuring luxury animations, modern UI, and premium user experience.
 
 ## ✨ Features
 
-- **Modern Design**: Clean, minimal interface with smooth animations and transitions
-- **Responsive Layout**: Optimized for desktop, tablet, and mobile devices
-- **Dark Mode**: Toggle between light and dark themes with system preference detection
+### 🎭 **Luxury Brand Intro Animation**
+- **Fashion-focused Typography**: Bold letter-by-letter animation with luxury glow effects
+- **Mobile Optimized**: Responsive design with faster animations on mobile devices
+- **Enhanced Particle System**: Golden dust particles and luxury visual effects
+- **Premium Feel**: Multi-layer text shadows and sophisticated transitions
 - **Product Showcase**: Grid layout with hover effects and product cards
 - **Product Details**: Detailed product pages with image, description, features, and reviews
 - **Shopping Cart**: Add/remove items, quantity management, and persistent storage
