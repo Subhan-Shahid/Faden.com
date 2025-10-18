@@ -10,6 +10,7 @@ const ProductDetails = () => {
   const navigate = useNavigate();
   const { addToCart } = useCart();
   const [quantity, setQuantity] = useState(1);
+  const [selectedSize, setSelectedSize] = useState('');
   const [isAddedToCart, setIsAddedToCart] = useState(false);
 
   const product = products.find(p => p.id === parseInt(id));
@@ -34,8 +35,19 @@ const ProductDetails = () => {
     .slice(0, 4);
 
   const handleAddToCart = () => {
+    // Check if size selection is required
+    if (product.sizes && product.sizes.length > 1 && !selectedSize) {
+      alert('Please select a size');
+      return;
+    }
+
+    const productWithSize = {
+      ...product,
+      selectedSize: selectedSize || 'One Size'
+    };
+
     for (let i = 0; i < quantity; i++) {
-      addToCart(product);
+      addToCart(productWithSize);
     }
     setIsAddedToCart(true);
     setTimeout(() => setIsAddedToCart(false), 2000);
@@ -158,6 +170,30 @@ const ProductDetails = () => {
             {/* Add to Cart Section */}
             {product.inStock && (
               <div className="space-y-4 pt-6 border-t border-gray-200 dark:border-gray-700">
+                {/* Size Selection */}
+                {product.sizes && product.sizes.length > 1 && (
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                      Size:
+                    </label>
+                    <div className="flex flex-wrap gap-2">
+                      {product.sizes.map((size) => (
+                        <button
+                          key={size}
+                          onClick={() => setSelectedSize(size)}
+                          className={`px-4 py-2 border rounded-lg text-sm font-medium transition-all duration-200 ${
+                            selectedSize === size
+                              ? 'border-blue-500 bg-blue-500 text-white'
+                              : 'border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20'
+                          }`}
+                        >
+                          {size}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
                 <div className="flex items-center space-x-4">
                   <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
                     Quantity:
@@ -186,14 +222,21 @@ const ProductDetails = () => {
                   className={`w-full flex items-center justify-center space-x-2 px-8 py-4 rounded-lg font-medium transition-all duration-200 ${
                     isAddedToCart
                       ? 'bg-green-500 text-white'
+                      : (product.sizes && product.sizes.length > 1 && !selectedSize)
+                      ? 'bg-gray-400 text-white cursor-not-allowed'
                       : 'btn-primary'
                   }`}
-                  disabled={isAddedToCart}
+                  disabled={isAddedToCart || (product.sizes && product.sizes.length > 1 && !selectedSize)}
                 >
                   {isAddedToCart ? (
                     <>
                       <Check className="w-5 h-5" />
                       <span>Added to Cart!</span>
+                    </>
+                  ) : (product.sizes && product.sizes.length > 1 && !selectedSize) ? (
+                    <>
+                      <ShoppingCart className="w-5 h-5" />
+                      <span>Select Size First</span>
                     </>
                   ) : (
                     <>
