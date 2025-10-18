@@ -5,9 +5,9 @@
 export const products = [
   {
     id: 1,
-    name: "Premium Cotton T-Shirt",
+    name: "Tommy Hilfiger Logo Sweatshirt (Blue)",
     price: 89,
-    image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&h=500&fit=crop",
+    image: "/products/WhatsApp Image 2025-10-18 at 14.59.42_44a2e32d.jpg",
     category: "T-Shirts",
     description: "Crafted from the finest organic cotton, this premium t-shirt offers unparalleled comfort and style. Perfect for everyday luxury with a modern fit.",
     features: [
@@ -22,9 +22,9 @@ export const products = [
   },
   {
     id: 2,
-    name: "Luxury Wool Sweater",
+    name: "STWD Classic Hoodie (Assorted)",
     price: 299,
-    image: "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=500&h=500&fit=crop",
+    image: "/products/WhatsApp Image 2025-10-18 at 14.59.42_6fcdb302.jpg",
     category: "Sweaters",
     description: "Elegant merino wool sweater with a contemporary design. Soft, breathable, and perfect for both casual and formal occasions.",
     features: [
@@ -39,9 +39,9 @@ export const products = [
   },
   {
     id: 3,
-    name: "Designer Denim Jeans",
+    name: "Desert Cowboy Graphic Tee",
     price: 189,
-    image: "https://images.unsplash.com/photo-1542272604-787c3835535d?w=500&h=500&fit=crop",
+    image: "/products/WhatsApp Image 2025-10-18 at 14.59.42_782ae784.jpg",
     category: "Jeans",
     description: "Premium denim jeans with a perfect fit and timeless style. Crafted with attention to detail and built to last.",
     features: [
@@ -56,9 +56,9 @@ export const products = [
   },
   {
     id: 4,
-    name: "Silk Dress Shirt",
+    name: "Tommy Hilfiger Crest Sweatshirt (Olive)",
     price: 249,
-    image: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=500&h=500&fit=crop",
+    image: "/products/WhatsApp Image 2025-10-18 at 14.59.42_8ced9985.jpg",
     category: "Shirts",
     description: "Luxurious silk dress shirt with a modern cut. Perfect for business meetings or elegant evening events.",
     features: [
@@ -73,9 +73,9 @@ export const products = [
   },
   {
     id: 5,
-    name: "Cashmere Scarf",
+    name: "Tommy Hilfiger Logo Sweatshirt (Flat Lay Blue)",
     price: 159,
-    image: "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?w=500&h=500&fit=crop",
+    image: "/products/WhatsApp Image 2025-10-18 at 14.59.42_a6c76ead.jpg",
     category: "Accessories",
     description: "Ultra-soft cashmere scarf that adds elegance to any outfit. Lightweight yet warm, perfect for all seasons.",
     features: [
@@ -90,9 +90,9 @@ export const products = [
   },
   {
     id: 6,
-    name: "Leather Jacket",
+    name: "STWD Fleece Hoodie (Maroon)",
     price: 599,
-    image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500&h=500&fit=crop",
+    image: "/products/WhatsApp Image 2025-10-18 at 14.59.42_ad42ba17.jpg",
     category: "Jackets",
     description: "Premium leather jacket with a classic design. Made from genuine leather with attention to craftsmanship and durability.",
     features: [
@@ -107,9 +107,9 @@ export const products = [
   },
   {
     id: 7,
-    name: "Designer Sneakers",
+    name: "Navy Tee & Joggers Co-ord Set",
     price: 329,
-    image: "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=500&h=500&fit=crop",
+    image: "/products/WhatsApp Image 2025-10-18 at 14.59.42_ce871f0e.jpg",
     category: "Shoes",
     description: "Contemporary designer sneakers that blend comfort with style. Perfect for urban adventures and casual elegance.",
     features: [
@@ -124,9 +124,9 @@ export const products = [
   },
   {
     id: 8,
-    name: "Minimalist Watch",
+    name: "Tommy Hilfiger Logo Sweatshirt (Blue)",
     price: 199,
-    image: "https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=500&h=500&fit=crop",
+    image: "/products/WhatsApp Image 2025-10-18 at 14.59.42_44a2e32d.jpg",
     category: "Accessories",
     description: "Elegant minimalist watch with a clean design. Features a premium leather strap and precise quartz movement.",
     features: [
@@ -141,9 +141,9 @@ export const products = [
   },
   {
     id: 9,
-    name: "Tailored Blazer",
+    name: "STWD Classic Hoodie (Assorted)",
     price: 449,
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop",
+    image: "/products/WhatsApp Image 2025-10-18 at 14.59.42_6fcdb302.jpg",
     category: "Blazers",
     description: "Sophisticated tailored blazer perfect for business and formal occasions. Made from premium wool blend with impeccable fit.",
     features: [
@@ -158,9 +158,9 @@ export const products = [
   },
   {
     id: 10,
-    name: "Luxury Handbag",
+    name: "Desert Cowboy Graphic Tee",
     price: 799,
-    image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500&h=500&fit=crop",
+    image: "/products/WhatsApp Image 2025-10-18 at 14.59.42_782ae784.jpg",
     category: "Bags",
     description: "Exquisite leather handbag with timeless design. Spacious interior with multiple compartments for organization.",
     features: [
