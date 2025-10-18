@@ -1,3 +1,7 @@
+// 🛍️ FADEN PRODUCTS - Replace these with your own products
+// 📖 See PRODUCT_GUIDE.md for detailed instructions
+// 📝 Use product-template.js as a template for new products
+
 export const products = [
   {
     id: 1,
