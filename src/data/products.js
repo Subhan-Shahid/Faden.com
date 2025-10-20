@@ -21,43 +21,9 @@ export const products = [
     sizes: ["XS", "S", "M", "L", "XL", "XXL"]
   },
   {
-    id: 2,
-    name: "STWD Classic Hoodie (Assorted)",
-    price: 299,
-    image: "/products/WhatsApp Image 2025-10-18 at 14.59.42_6fcdb302.jpg",
-    category: "Sweaters",
-    description: "Elegant merino wool sweater with a contemporary design. Soft, breathable, and perfect for both casual and formal occasions.",
-    features: [
-      "100% Merino Wool",
-      "Machine washable",
-      "Odor-resistant",
-      "Temperature regulating"
-    ],
-    inStock: true,
-    rating: 4.9,
-    sizes: ["S", "M", "L", "XL"]
-  },
-  {
-    id: 3,
-    name: "Desert Cowboy Graphic Tee",
-    price: 189,
-    image: "/products/WhatsApp Image 2025-10-18 at 14.59.42_782ae784.jpg",
-    category: "Jeans",
-    description: "Premium denim jeans with a perfect fit and timeless style. Crafted with attention to detail and built to last.",
-    features: [
-      "Stretch denim fabric",
-      "Reinforced stitching",
-      "Fade-resistant",
-      "Slim fit design"
-    ],
-    inStock: true,
-    rating: 4.7,
-    sizes: ["28", "30", "32", "34", "36", "38"]
-  },
-  {
     id: 4,
     name: "Tommy Hilfiger Crest Sweatshirt (Olive)",
-    price: 249,
+    price: 1499,
     image: "/products/WhatsApp Image 2025-10-18 at 14.59.42_8ced9985.jpg",
     category: "Shirts",
     description: "Luxurious silk dress shirt with a modern cut. Perfect for business meetings or elegant evening events.",
@@ -91,7 +57,7 @@ export const products = [
   {
     id: 6,
     name: "STWD Fleece Hoodie (Maroon)",
-    price: 599,
+    price: 1999,
     image: "/products/WhatsApp Image 2025-10-18 at 14.59.42_ad42ba17.jpg",
     category: "Jackets",
     description: "Premium leather jacket with a classic design. Made from genuine leather with attention to craftsmanship and durability.",
@@ -142,7 +108,7 @@ export const products = [
   {
     id: 9,
     name: "STWD Classic Hoodie (Assorted)",
-    price: 449,
+    price: 1999,
     image: "/products/WhatsApp Image 2025-10-18 at 14.59.42_6fcdb302.jpg",
     category: "Blazers",
     description: "Sophisticated tailored blazer perfect for business and formal occasions. Made from premium wool blend with impeccable fit.",

@@ -6,9 +6,12 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import ProductDetails from './pages/ProductDetails';
 import Cart from './pages/Cart';
+import Checkout from './pages/Checkout';
+import OrderSuccess from './pages/OrderSuccess';
 import LogoShowcase from './components/LogoShowcase';
 import SplitAnimationShowcase from './components/SplitAnimationShowcase';
 import FashionBrandIntro from './components/FashionBrandIntro';
+import Footer from './components/Footer';
 
 function App() {
   const [showIntro, setShowIntro] = useState(true);
@@ -34,11 +37,14 @@ function App() {
                   <Route path="/" element={<Home />} />
                   <Route path="/product/:id" element={<ProductDetails />} />
                   <Route path="/cart" element={<Cart />} />
+                  <Route path="/checkout" element={<Checkout />} />
+                  <Route path="/order-success" element={<OrderSuccess />} />
                   <Route path="/logo-showcase" element={<LogoShowcase />} />
                   <Route path="/split-animation" element={<SplitAnimationShowcase />} />
                   <Route path="/fashion-intro" element={<FashionBrandIntro onComplete={() => {}} />} />
                 </Routes>
               </main>
+              <Footer />
             </div>
           </Router>
         </div>

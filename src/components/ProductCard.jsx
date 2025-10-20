@@ -13,9 +13,9 @@ const ProductCard = ({ product }) => {
   };
 
   const formatPrice = (price) => {
-    return new Intl.NumberFormat('en-US', {
+    return new Intl.NumberFormat('en-PK', {
       style: 'currency',
-      currency: 'USD',
+      currency: 'PKR',
     }).format(price);
   };
 
