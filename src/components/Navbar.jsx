@@ -21,7 +21,11 @@ const Navbar = () => {
 
   const navLinks = [
     { path: '/', label: 'Home' },
-    { path: '/', label: 'Products' },
+    { path: '/', label: 'Shop All' },
+    { path: '/?category=Hoodies', label: 'Hoodies' },
+    { path: '/?category=T-Shirts', label: 'T-Shirts' },
+    { path: '/?category=Sweatshirts', label: 'Sweatshirts' },
+    { path: '/?category=Co-ord Sets', label: 'Sets' },
   ];
 
   return (

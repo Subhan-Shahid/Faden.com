@@ -74,7 +74,8 @@ const Checkout = () => {
       lines.push('Items:');
       items.forEach((it) => {
         const size = it.selectedSize ? ` (Size: ${it.selectedSize})` : '';
-        lines.push(`- ${it.name}${size} x${it.quantity} = ${formatPrice(it.price * it.quantity)}`);
+        const color = it.selectedColor ? ` (Color: ${it.selectedColor})` : '';
+        lines.push(`- ${it.name}${size}${color} x${it.quantity} = ${formatPrice(it.price * it.quantity)}`);
       });
       lines.push('');
       lines.push(`Subtotal: ${formatPrice(totals.subtotal)}`);
@@ -243,6 +244,9 @@ const Checkout = () => {
                       <span className="font-medium">{item.name}</span>
                       {item.selectedSize && (
                         <span className="ml-1 text-gray-500">(Size: {item.selectedSize})</span>
+                      )}
+                      {item.selectedColor && (
+                        <span className="ml-1 text-gray-500">(Color: {item.selectedColor})</span>
                       )}
                       <span className="ml-1 text-gray-500">x{item.quantity}</span>
                     </div>

@@ -138,11 +138,12 @@ src/
 
 ## 📦 Product Data
 
-The application uses dummy product data with the following structure:
-- **8 Products**: Mix of tech products (laptops, phones, accessories)
-- **Categories**: Laptops, Smartphones, Audio, Tablets, Wearables, Desktops, Displays, Accessories
-- **Product Fields**: ID, name, price, image, category, description, features, stock status, rating
-- **High-Quality Images**: Unsplash product images
+The application features clothing and streetwear products:
+- **6 Products**: Premium streetwear including hoodies, sweatshirts, t-shirts, and co-ord sets
+- **Categories**: T-Shirts, Sweatshirts, Hoodies, Co-ord Sets, Shirts, Sweaters, Jeans, Jackets
+- **Product Fields**: ID, name, price (PKR), image, category, description, features, stock status, rating, sizes, colors (optional)
+- **Size Selection**: Standard clothing sizes (S, M, L, XL, XXL)
+- **Color Options**: Available for select products with visual color picker
 
 ## 🚀 Performance
 

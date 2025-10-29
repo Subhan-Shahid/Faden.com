@@ -11,6 +11,7 @@ const ProductDetails = () => {
   const { addToCart } = useCart();
   const [quantity, setQuantity] = useState(1);
   const [selectedSize, setSelectedSize] = useState('');
+  const [selectedColor, setSelectedColor] = useState('');
   const [isAddedToCart, setIsAddedToCart] = useState(false);
 
   const product = products.find(p => p.id === parseInt(id));
@@ -41,9 +42,16 @@ const ProductDetails = () => {
       return;
     }
 
+    // Check if color selection is required
+    if (product.colors && product.colors.length > 0 && !selectedColor) {
+      alert('Please select a color');
+      return;
+    }
+
     const productWithSize = {
       ...product,
-      selectedSize: selectedSize || 'One Size'
+      selectedSize: selectedSize || 'One Size',
+      selectedColor: selectedColor || null
     };
 
     for (let i = 0; i < quantity; i++) {
@@ -170,6 +178,40 @@ const ProductDetails = () => {
             {/* Add to Cart Section */}
             {product.inStock && (
               <div className="space-y-4 pt-6 border-t border-gray-200 dark:border-gray-700">
+                {/* Color Selection */}
+                {product.colors && product.colors.length > 0 && (
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                      Color:
+                    </label>
+                    <div className="flex flex-wrap gap-3">
+                      {product.colors.map((color) => (
+                        <button
+                          key={color.name}
+                          onClick={() => setSelectedColor(color.name)}
+                          className={`relative group`}
+                          title={color.name}
+                        >
+                          <div
+                            className={`w-10 h-10 rounded-full border-2 transition-all duration-200 ${
+                              selectedColor === color.name
+                                ? 'border-blue-500 scale-110 shadow-lg'
+                                : 'border-gray-300 dark:border-gray-600 hover:border-blue-400 hover:scale-105'
+                            }`}
+                            style={{ backgroundColor: color.value }}
+                          />
+                          {selectedColor === color.name && (
+                            <Check className="w-4 h-4 text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+                          )}
+                          <span className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs text-gray-600 dark:text-gray-400 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
+                            {color.name}
+                          </span>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
                 {/* Size Selection */}
                 {product.sizes && product.sizes.length > 1 && (
                   <div className="space-y-2">

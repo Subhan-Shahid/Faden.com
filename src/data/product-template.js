@@ -3,14 +3,14 @@
 export const productTemplate = {
   id: 999,                                    // ⚠️ IMPORTANT: Use unique ID numbers
   name: "Your Product Name Here",             // Product title
-  price: 199,                                 // Price in USD (no $ symbol)
+  price: 1199,                                // Price in PKR (no currency symbol)
   image: "/products/your-image.jpg",          // Path to your image in public/products/
   category: "T-Shirts",                       // Choose from available categories
-  description: "Write a compelling product description here. Mention premium materials, craftsmanship, and key benefits.",
+  description: "Write a compelling product description here. Mention fabric, fit, style, and key benefits for clothing items.",
   features: [                                 // 3-4 key features/benefits
-    "Premium material (e.g., 100% Cotton)",
-    "Special feature (e.g., Pre-shrunk fabric)",
-    "Quality detail (e.g., Reinforced seams)",
+    "Premium fabric (e.g., 100% Cotton)",
+    "Fit type (e.g., Regular fit)",
+    "Quality detail (e.g., Reinforced stitching)",
     "Care instruction (e.g., Machine washable)"
   ],
   inStock: true,                             // true = available, false = sold out
@@ -19,8 +19,8 @@ export const productTemplate = {
 };
 
 // 🏷️ AVAILABLE CATEGORIES (copy exactly):
-// "T-Shirts", "Sweaters", "Jeans", "Shirts", "Jackets", 
-// "Shoes", "Blazers", "Bags", "Accessories"
+// "T-Shirts", "Sweatshirts", "Hoodies", "Co-ord Sets", "Shirts",
+// "Sweaters", "Jeans", "Jackets"
 
 // 📏 SIZE OPTIONS (choose appropriate set):
 // Clothing: ["XS", "S", "M", "L", "XL", "XXL"]
@@ -35,7 +35,7 @@ export const productTemplate = {
 // 4. Save and test!
 
 // 🖼️ IMAGE NAMING SUGGESTIONS:
-// - black-leather-jacket.jpg
+// - black-hoodie.jpg
 // - white-cotton-tshirt.jpg  
 // - blue-denim-jeans.jpg
-// - red-silk-dress.jpg
+// - gray-sweatshirt.jpg

@@ -197,9 +197,9 @@ const Cart = () => {
               </div>
 
               <div className="mt-6 text-xs text-gray-500 dark:text-gray-400 space-y-2">
-                <p>• Free shipping on orders over $50</p>
-                <p>• 30-day return policy</p>
-                <p>• Secure checkout with SSL encryption</p>
+                <p>• Free shipping on orders over PKR 3000</p>
+                <p>• 7-day exchange policy</p>
+                <p>• 100% authentic products guaranteed</p>
               </div>
             </div>
           </div>

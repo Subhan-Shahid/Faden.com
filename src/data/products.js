@@ -4,68 +4,51 @@
 
 export const products = [
   {
-    id: 1,
-    name: "Tommy Hilfiger Logo Sweatshirt (Blue)",
-    price: 89,
-    image: "/products/WhatsApp Image 2025-10-18 at 14.59.42_44a2e32d.jpg",
-    category: "T-Shirts",
-    description: "Crafted from the finest organic cotton, this premium t-shirt offers unparalleled comfort and style. Perfect for everyday luxury with a modern fit.",
-    features: [
-      "100% Organic Cotton",
-      "Pre-shrunk fabric",
-      "Reinforced seams",
-      "Available in 6 colors"
-    ],
-    inStock: true,
-    rating: 4.8,
-    sizes: ["XS", "S", "M", "L", "XL", "XXL"]
-  },
-  {
     id: 4,
     name: "Tommy Hilfiger Crest Sweatshirt (Olive)",
-    price: 1499,
+    price: 1199,
     image: "/products/WhatsApp Image 2025-10-18 at 14.59.42_8ced9985.jpg",
-    category: "Shirts",
-    description: "Luxurious silk dress shirt with a modern cut. Perfect for business meetings or elegant evening events.",
+    category: "Sweatshirts",
+    description: "Classic Tommy Hilfiger sweatshirt featuring the iconic crest logo. Premium cotton blend for ultimate comfort and style.",
     features: [
-      "100% Pure Silk",
-      "French cuffs",
-      "Mother-of-pearl buttons",
-      "Tailored fit"
+      "Premium cotton blend",
+      "Embroidered crest logo",
+      "Ribbed cuffs and hem",
+      "Regular fit"
     ],
-    inStock: false,
+    inStock: true,
     rating: 4.6,
     sizes: ["S", "M", "L", "XL"]
   },
   {
     id: 5,
     name: "Tommy Hilfiger Logo Sweatshirt (Flat Lay Blue)",
-    price: 159,
+    price: 1199,
     image: "/products/WhatsApp Image 2025-10-18 at 14.59.42_a6c76ead.jpg",
-    category: "Accessories",
-    description: "Ultra-soft cashmere scarf that adds elegance to any outfit. Lightweight yet warm, perfect for all seasons.",
+    category: "Sweatshirts",
+    description: "Iconic Tommy Hilfiger logo sweatshirt in vibrant blue. Soft fleece interior keeps you warm while maintaining a sleek silhouette.",
     features: [
-      "100% Cashmere",
-      "Lightweight design",
-      "Hypoallergenic",
-      "Hand-finished edges"
+      "Soft fleece lining",
+      "Classic logo design",
+      "Durable construction",
+      "Machine washable"
     ],
     inStock: true,
     rating: 4.5,
-    sizes: ["One Size"]
+    sizes: ["S", "M", "L", "XL"]
   },
   {
     id: 6,
     name: "STWD Fleece Hoodie (Maroon)",
     price: 1999,
     image: "/products/WhatsApp Image 2025-10-18 at 14.59.42_ad42ba17.jpg",
-    category: "Jackets",
-    description: "Premium leather jacket with a classic design. Made from genuine leather with attention to craftsmanship and durability.",
+    category: "Hoodies",
+    description: "Cozy STWD fleece hoodie in rich maroon. Perfect for layering or wearing solo, with a relaxed fit and premium fleece material.",
     features: [
-      "Genuine leather",
-      "YKK zippers",
-      "Quilted lining",
-      "Multiple pockets"
+      "Premium fleece fabric",
+      "Adjustable drawstring hood",
+      "Kangaroo pocket",
+      "Soft brushed interior"
     ],
     inStock: true,
     rating: 4.8,
@@ -74,82 +57,70 @@ export const products = [
   {
     id: 7,
     name: "Navy Tee & Joggers Co-ord Set",
-    price: 329,
+    price: 1799,
     image: "/products/WhatsApp Image 2025-10-18 at 14.59.42_ce871f0e.jpg",
-    category: "Shoes",
-    description: "Contemporary designer sneakers that blend comfort with style. Perfect for urban adventures and casual elegance.",
+    category: "Co-ord Sets",
+    description: "Matching navy tee and joggers set for effortless style. Comfortable cotton blend perfect for lounging or casual outings.",
     features: [
-      "Premium leather upper",
-      "Cushioned sole",
-      "Breathable lining",
-      "Handcrafted details"
+      "Matching set",
+      "Soft cotton blend",
+      "Elastic waistband",
+      "Relaxed fit"
     ],
     inStock: true,
     rating: 4.4,
-    sizes: ["7", "8", "9", "10", "11", "12"]
-  },
-  {
-    id: 8,
-    name: "Tommy Hilfiger Logo Sweatshirt (Blue)",
-    price: 199,
-    image: "/products/WhatsApp Image 2025-10-18 at 14.59.42_44a2e32d.jpg",
-    category: "Accessories",
-    description: "Elegant minimalist watch with a clean design. Features a premium leather strap and precise quartz movement.",
-    features: [
-      "Quartz movement",
-      "Sapphire crystal glass",
-      "Genuine leather strap",
-      "Water resistant"
-    ],
-    inStock: true,
-    rating: 4.3,
-    sizes: ["One Size"]
+    sizes: ["S", "M", "L", "XL"]
   },
   {
     id: 9,
     name: "STWD Classic Hoodie (Assorted)",
     price: 1999,
     image: "/products/WhatsApp Image 2025-10-18 at 14.59.42_6fcdb302.jpg",
-    category: "Blazers",
-    description: "Sophisticated tailored blazer perfect for business and formal occasions. Made from premium wool blend with impeccable fit.",
+    category: "Hoodies",
+    description: "STWD classic hoodie available in multiple colors. Premium quality construction with a timeless design that never goes out of style.",
     features: [
-      "Wool blend fabric",
-      "Fully lined",
-      "Two-button closure",
-      "Tailored fit"
+      "Premium cotton fleece",
+      "Adjustable hood",
+      "Front kangaroo pocket",
+      "Available in 4 colors"
     ],
     inStock: true,
     rating: 4.7,
-    sizes: ["S", "M", "L", "XL"]
+    sizes: ["S", "M", "L", "XL"],
+    colors: [
+      { name: "Black", value: "#000000" },
+      { name: "White", value: "#ffffff" },
+      { name: "Gray", value: "#6b7280" },
+      { name: "Maroon", value: "#7f1d1d" }
+    ]
   },
   {
     id: 10,
     name: "Desert Cowboy Graphic Tee",
-    price: 799,
+    price: 1199,
     image: "/products/WhatsApp Image 2025-10-18 at 14.59.42_782ae784.jpg",
-    category: "Bags",
-    description: "Exquisite leather handbag with timeless design. Spacious interior with multiple compartments for organization.",
+    category: "T-Shirts",
+    description: "Vintage-inspired desert cowboy graphic tee with a retro aesthetic. Soft cotton fabric with a comfortable relaxed fit.",
     features: [
-      "Italian leather",
-      "Gold-plated hardware",
-      "Multiple compartments",
-      "Dust bag included"
+      "100% cotton",
+      "Vintage graphic print",
+      "Crew neck design",
+      "Pre-shrunk fabric"
     ],
     inStock: true,
     rating: 4.9,
-    sizes: ["One Size"]
+    sizes: ["S", "M", "L", "XL"]
   }
 ];
 
 export const categories = [
   "All",
   "T-Shirts",
-  "Sweaters", 
-  "Jeans",
+  "Sweatshirts",
+  "Hoodies",
+  "Co-ord Sets",
   "Shirts",
-  "Jackets",
-  "Shoes",
-  "Blazers",
-  "Bags",
-  "Accessories"
+  "Sweaters",
+  "Jeans",
+  "Jackets"
 ];
