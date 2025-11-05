@@ -289,7 +289,7 @@ const ProductDetails = () => {
                 </button>
                 <div className="mt-4 flex items-center justify-center space-x-4">
                   <a
-                    href="https://wa.me/923216405272"
+                    href="https://wa.me/923106429244"
                     target="_blank"
                     rel="noreferrer"
                     aria-label="Order on WhatsApp"
@@ -313,7 +313,7 @@ const ProductDetails = () => {
                     </svg>
                   </a>
                   <a
-                    href="https://www.facebook.com/share/19toLKw3DC/?mibextid=wwXIfr"
+                    href="https://www.facebook.com/share/1AditKD6ZD/?mibextid=wwXIfr"
                     target="_blank"
                     rel="noreferrer"
                     aria-label="Order on Facebook"

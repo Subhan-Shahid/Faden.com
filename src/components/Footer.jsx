@@ -10,7 +10,7 @@ const Footer = () => {
           </div>
           <div className="flex items-center space-x-3">
             <a
-              href="https://wa.me/923216405272"
+              href="https://wa.me/923106429244"
               target="_blank"
               rel="noreferrer"
               aria-label="WhatsApp"
@@ -34,7 +34,7 @@ const Footer = () => {
               </svg>
             </a>
             <a
-              href="https://www.facebook.com/share/19toLKw3DC/?mibextid=wwXIfr"
+              href="https://www.facebook.com/share/1AditKD6ZD/?mibextid=wwXIfr"
               target="_blank"
               rel="noreferrer"
               aria-label="Facebook"

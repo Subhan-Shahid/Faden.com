@@ -82,7 +82,7 @@ const Checkout = () => {
       lines.push(`Total: ${formatPrice(totals.total)}`);
 
       const message = encodeURIComponent(lines.join('\n'));
-      const waUrl = `https://wa.me/923216405272?text=${message}`;
+      const waUrl = `https://wa.me/923106429244?text=${message}`;
 
       // Open WhatsApp in new tab
       window.open(waUrl, '_blank', 'noopener');
