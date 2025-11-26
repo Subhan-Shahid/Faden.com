@@ -15,7 +15,32 @@ const ProductDetails = () => {
   const [isAddedToCart, setIsAddedToCart] = useState(false);
 
   const product = products.find(p => p.id === parseInt(id));
-  
+
+  // Build WhatsApp link with product info and image URL
+  let whatsappUrl = 'https://wa.me/923106429244';
+  if (product) {
+    try {
+      const lines = [];
+      lines.push(`Product Inquiry - Faden.com`);
+      lines.push(`Name: ${product.name}`);
+      lines.push(`Category: ${product.category}`);
+      lines.push(`Price: ${product.price}`);
+
+      if (product.image) {
+        const origin = typeof window !== 'undefined' ? window.location.origin : '';
+        const imageUrl = product.image.startsWith('http')
+          ? product.image
+          : `${origin}${product.image.startsWith('/') ? '' : '/'}${product.image}`;
+        lines.push(`Image: ${imageUrl}`);
+      }
+
+      const message = encodeURIComponent(lines.join('\n'));
+      whatsappUrl = `https://wa.me/923106429244?text=${message}`;
+    } catch {
+      whatsappUrl = 'https://wa.me/923106429244';
+    }
+  }
+
   if (!product) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -289,7 +314,7 @@ const ProductDetails = () => {
                 </button>
                 <div className="mt-4 flex items-center justify-center space-x-4">
                   <a
-                    href="https://wa.me/923106429244"
+                    href={whatsappUrl}
                     target="_blank"
                     rel="noreferrer"
                     aria-label="Order on WhatsApp"

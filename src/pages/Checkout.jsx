@@ -76,6 +76,19 @@ const Checkout = () => {
         const size = it.selectedSize ? ` (Size: ${it.selectedSize})` : '';
         const color = it.selectedColor ? ` (Color: ${it.selectedColor})` : '';
         lines.push(`- ${it.name}${size}${color} x${it.quantity} = ${formatPrice(it.price * it.quantity)}`);
+
+        // Include image URL for each item if available
+        if (it.image) {
+          try {
+            const origin = window.location.origin;
+            const imageUrl = it.image.startsWith('http')
+              ? it.image
+              : `${origin}${it.image.startsWith('/') ? '' : '/'}${it.image}`;
+            lines.push(`  Image: ${imageUrl}`);
+          } catch {
+            // If window is not available for some reason, skip adding image URL
+          }
+        }
       });
       lines.push('');
       lines.push(`Subtotal: ${formatPrice(totals.subtotal)}`);

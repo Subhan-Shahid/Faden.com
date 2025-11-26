@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Search, Filter } from 'lucide-react';
 import ProductCard from '../components/ProductCard';
@@ -9,6 +9,7 @@ const Home = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [sortBy, setSortBy] = useState('name');
+  const filtersRef = useRef(null);
 
   // Handle category from URL parameters
   useEffect(() => {
@@ -20,10 +21,17 @@ const Home = () => {
     }
   }, [searchParams]);
 
+  // Smoothly scroll to filters/products section when category changes via URL/nav
+  useEffect(() => {
+    if (filtersRef.current && selectedCategory !== 'All') {
+      filtersRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [selectedCategory]);
+
   const filteredAndSortedProducts = useMemo(() => {
     let filtered = products.filter(product => {
       const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           product.description.toLowerCase().includes(searchTerm.toLowerCase());
+        product.description.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCategory = selectedCategory === 'All' || product.category === selectedCategory;
       return matchesSearch && matchesCategory;
     });
@@ -59,7 +67,10 @@ const Home = () => {
       </section>
 
       {/* Filters and Search */}
-      <section className="py-8 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
+      <section
+        ref={filtersRef}
+        className="py-8 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
             {/* Search */}
