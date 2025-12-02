@@ -40,19 +40,19 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+    <nav className="fixed top-0 left-0 right-0 z-50 glass-strong border-b border-white/20 dark:border-gray-800/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link
             to="/"
-            className="flex items-center space-x-3 text-xl font-bold text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+            className="flex items-center space-x-3 text-xl font-bold group"
           >
             <FashionLogo
-              className="w-10 h-10"
+              className="w-10 h-10 transition-transform duration-300 group-hover:scale-110"
               animated={true}
             />
-            <span className="transition-all duration-300 hover:tracking-wide">Faden</span>
+            <span className="gradient-text transition-all duration-300 group-hover:tracking-wider">Faden</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -61,12 +61,14 @@ const Navbar = () => {
               <Link
                 key={link.label}
                 to={link.path}
-                className={`text-sm font-medium transition-colors hover:text-gray-600 dark:hover:text-gray-300 ${isActive(link)
-                    ? 'text-gray-900 dark:text-white'
-                    : 'text-gray-500 dark:text-gray-400'
+                className={`relative text-sm font-semibold transition-colors hover:text-gray-900 dark:hover:text-white group ${isActive(link)
+                  ? 'text-gray-900 dark:text-white'
+                  : 'text-gray-600 dark:text-gray-400'
                   }`}
               >
                 {link.label}
+                <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-primary transition-all duration-300 ${isActive(link) ? 'w-full' : 'w-0 group-hover:w-full'
+                  }`}></span>
               </Link>
             ))}
           </div>
@@ -112,6 +114,7 @@ const Navbar = () => {
                 </svg>
               </a>
             </div>
+
             {/* Theme toggle */}
             <button
               onClick={toggleTheme}
@@ -128,11 +131,11 @@ const Navbar = () => {
             {/* Cart */}
             <Link
               to="/cart"
-              className="relative p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+              className="relative p-2.5 rounded-xl bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300 hover:scale-110"
             >
-              <ShoppingCart className="w-5 h-5 text-gray-600 dark:text-gray-300" />
+              <ShoppingCart className="w-5 h-5 text-gray-700 dark:text-gray-300" />
               {cartItemsCount > 0 && (
-                <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-medium">
+                <span className="absolute -top-1 -right-1 bg-black dark:bg-white text-white dark:text-black text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold animate-bounce-subtle shadow-lg">
                   {cartItemsCount > 99 ? '99+' : cartItemsCount}
                 </span>
               )}
@@ -163,8 +166,8 @@ const Navbar = () => {
                   to={link.path}
                   onClick={() => setIsMenuOpen(false)}
                   className={`text-sm font-medium transition-colors hover:text-gray-600 dark:hover:text-gray-300 ${isActive(link)
-                      ? 'text-gray-900 dark:text-white'
-                      : 'text-gray-500 dark:text-gray-400'
+                    ? 'text-gray-900 dark:text-white'
+                    : 'text-gray-500 dark:text-gray-400'
                     }`}
                 >
                   {link.label}

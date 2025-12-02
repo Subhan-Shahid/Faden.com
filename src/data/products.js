@@ -110,6 +110,23 @@ export const products = [
     inStock: true,
     rating: 4.9,
     sizes: ["S", "M", "L", "XL"]
+  },
+  {
+    id: 11,
+    name: "Adidas Track Jacket (Olive Green)",
+    price: 2199,
+    image: "/WhatsApp Image 2025-12-01 at 09.02.13_a2181f25.jpg",
+    category: "Jackets",
+    description: "Premium olive green track jacket with signature stripes. Perfect for workouts or casual streetwear looks.",
+    features: [
+      "Soft, breathable fabric",
+      "Full-zip front",
+      "Ribbed cuffs and hem",
+      "Signature triple-stripe sleeves"
+    ],
+    inStock: true,
+    rating: 4.7,
+    sizes: ["S", "M", "L", "XL"]
   }
 ];
 

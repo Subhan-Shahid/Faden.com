@@ -52,24 +52,62 @@ const Home = () => {
   }, [searchTerm, selectedCategory, sortBy]);
 
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-900 dark:to-gray-800 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6 animate-fade-in">
+    <div className="min-h-screen pt-16">
+      {/* Hero Section - Monochrome */}
+      <section className="relative bg-black dark:bg-black py-32 overflow-hidden">
+        {/* Geometric Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          {/* Grid pattern */}
+          <div className="absolute inset-0 opacity-5" style={{
+            backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+                             linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
+            backgroundSize: '100px 100px'
+          }}></div>
+
+          {/* Diagonal lines */}
+          <div className="absolute top-0 left-0 w-full h-full">
+            <div className="absolute top-1/4 left-0 right-0 h-px bg-white/10 transform -rotate-12"></div>
+            <div className="absolute top-3/4 left-0 right-0 h-px bg-white/10 transform rotate-12"></div>
+          </div>
+
+          {/* Floating squares */}
+          <div className="absolute top-20 right-20 w-32 h-32 border border-white/10 transform rotate-45 animate-float"></div>
+          <div className="absolute bottom-32 left-32 w-24 h-24 border border-white/10 transform rotate-12 animate-float" style={{ animationDelay: '1s' }}></div>
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
+          <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 animate-slide-up tracking-tight">
             Elevate Your
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Style</span>
+            <span className="block mt-2 text-white animate-float-3d">
+              Style
+            </span>
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto animate-slide-up">
+          <p className="text-xl md:text-2xl text-gray-400 mb-10 max-w-3xl mx-auto animate-slide-up stagger-1 leading-relaxed">
             Discover our curated collection of premium streetwear and fashion essentials designed for the modern wardrobe.
           </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up stagger-2">
+            <a href="#products" className="btn-primary text-lg px-10 py-4">
+              Shop Now
+            </a>
+            <a href="#featured" className="btn-secondary text-lg px-10 py-4">
+              View Collection
+            </a>
+          </div>
+        </div>
+
+        {/* Minimal scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-subtle">
+          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex items-start justify-center p-2">
+            <div className="w-1 h-3 bg-white/50 rounded-full animate-pulse"></div>
+          </div>
         </div>
       </section>
 
       {/* Filters and Search */}
       <section
         ref={filtersRef}
-        className="py-8 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800"
+        id="products"
+        className="py-8 bg-gray-50/50 dark:bg-gray-900/50 backdrop-blur-sm border-b border-gray-200/50 dark:border-gray-800/50"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
@@ -81,7 +119,7 @@ const Home = () => {
                 placeholder="Search products..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                className="input-modern"
               />
             </div>
 
@@ -92,7 +130,7 @@ const Home = () => {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                  className="px-4 py-3 border-2 border-gray-200 dark:border-gray-700 rounded-xl bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm text-gray-900 dark:text-white focus:border-black dark:focus:border-white focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 focus:outline-none transition-all"
                 >
                   {categories.map(category => (
                     <option key={category} value={category}>
@@ -106,7 +144,7 @@ const Home = () => {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                className="px-4 py-3 border-2 border-gray-200 dark:border-gray-700 rounded-xl bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm text-gray-900 dark:text-white focus:border-black dark:focus:border-white focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 focus:outline-none transition-all"
               >
                 <option value="name">Sort by Name</option>
                 <option value="price-low">Price: Low to High</option>
@@ -131,8 +169,8 @@ const Home = () => {
               {filteredAndSortedProducts.map((product, index) => (
                 <div
                   key={product.id}
-                  className="animate-fade-in"
-                  style={{ animationDelay: `${index * 0.1}s` }}
+                  className="animate-scale-in"
+                  style={{ animationDelay: `${index * 0.05}s` }}
                 >
                   <ProductCard product={product} />
                 </div>
