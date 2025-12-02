@@ -2,6 +2,7 @@ import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Search, Filter } from 'lucide-react';
 import ProductCard from '../components/ProductCard';
+import SEO from '../components/SEO';
 import { products, categories } from '../data/products';
 
 const Home = () => {
@@ -53,6 +54,7 @@ const Home = () => {
 
   return (
     <div className="min-h-screen pt-16">
+      <SEO />
       {/* Hero Section - Monochrome */}
       <section className="relative bg-black dark:bg-black py-32 overflow-hidden">
         {/* Geometric Background Elements */}
