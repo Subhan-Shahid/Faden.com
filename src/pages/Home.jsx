@@ -3,6 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 import { Search, Filter } from 'lucide-react';
 import ProductCard from '../components/ProductCard';
 import SEO from '../components/SEO';
+import HeroSlideshow from '../components/HeroSlideshow';
 import { products, categories } from '../data/products';
 
 const Home = () => {
@@ -73,54 +74,7 @@ const Home = () => {
         }}
       />
       {/* Hero Section - Monochrome */}
-      <section className="relative bg-black dark:bg-black py-32 overflow-hidden">
-        {/* Geometric Background Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          {/* Grid pattern */}
-          <div className="absolute inset-0 opacity-5" style={{
-            backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-                             linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
-            backgroundSize: '100px 100px'
-          }}></div>
-
-          {/* Diagonal lines */}
-          <div className="absolute top-0 left-0 w-full h-full">
-            <div className="absolute top-1/4 left-0 right-0 h-px bg-white/10 transform -rotate-12"></div>
-            <div className="absolute top-3/4 left-0 right-0 h-px bg-white/10 transform rotate-12"></div>
-          </div>
-
-          {/* Floating squares */}
-          <div className="absolute top-20 right-20 w-32 h-32 border border-white/10 transform rotate-45 animate-float"></div>
-          <div className="absolute bottom-32 left-32 w-24 h-24 border border-white/10 transform rotate-12 animate-float" style={{ animationDelay: '1s' }}></div>
-        </div>
-
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
-          <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 animate-slide-up tracking-tight">
-            Elevate Your
-            <span className="block mt-2 text-white animate-float-3d">
-              Style
-            </span>
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-400 mb-10 max-w-3xl mx-auto animate-slide-up stagger-1 leading-relaxed">
-            Discover our curated collection of premium streetwear and fashion essentials designed for the modern wardrobe.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up stagger-2">
-            <a href="#products" className="btn-primary text-lg px-10 py-4">
-              Shop Now
-            </a>
-            <a href="#featured" className="btn-secondary text-lg px-10 py-4">
-              View Collection
-            </a>
-          </div>
-        </div>
-
-        {/* Minimal scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-subtle">
-          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex items-start justify-center p-2">
-            <div className="w-1 h-3 bg-white/50 rounded-full animate-pulse"></div>
-          </div>
-        </div>
-      </section>
+      <HeroSlideshow />
 
       {/* Filters and Search */}
       <section

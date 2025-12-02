@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ShoppingCart, Star, Heart, Eye, Sparkles } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 
@@ -7,6 +7,7 @@ const ProductCard = ({ product }) => {
   const { addToCart } = useCart();
   const [isWishlisted, setIsWishlisted] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
+  const navigate = useNavigate();
 
   const handleAddToCart = (e) => {
     e.preventDefault();
@@ -106,13 +107,17 @@ const ProductCard = ({ product }) => {
                   <ShoppingCart className="w-4 h-4" />
                   Add to Cart
                 </button>
-                <Link
-                  to={`/product/${product.id}`}
+                <button
+                  type="button"
                   className="p-2.5 bg-white dark:bg-gray-900 rounded-xl shadow-lg hover:scale-110 transition-transform"
-                  onClick={(e) => e.stopPropagation()}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    navigate(`/product/${product.id}`);
+                  }}
+                  aria-label="View product details"
                 >
                   <Eye className="w-4 h-4 text-gray-700 dark:text-gray-300" />
-                </Link>
+                </button>
               </div>
             )}
           </div>
