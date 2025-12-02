@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://faden.com/sitemap.xml
+Sitemap: https://faden-com.vercel.app/sitemap.xml

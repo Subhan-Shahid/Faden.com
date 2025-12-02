@@ -114,7 +114,7 @@ const ProductDetails = () => {
           },
           "offers": {
             "@type": "Offer",
-            "url": `https://faden.com/product/${product.id}`,
+            "url": `https://faden-com.vercel.app/product/${product.id}`,
             "priceCurrency": "PKR",
             "price": product.price,
             "availability": product.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock"

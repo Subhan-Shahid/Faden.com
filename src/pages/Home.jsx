@@ -54,7 +54,24 @@ const Home = () => {
 
   return (
     <div className="min-h-screen pt-16">
-      <SEO />
+      <SEO
+        title="Faden - Premium Streetwear & Online Clothing Store in Pakistan"
+        description="Faden is a Pakistan-based streetwear brand offering premium hoodies, sweatshirts, and modern fashion essentials with fast nationwide delivery. Shop authentic, high-quality fits for everyday wear."
+        keywords="faden, faden clothing, faden streetwear, faden pakistan, streetwear brand, hoodies online pakistan, sweatshirts, oversized hoodies, fashion store"
+        url="/"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Faden",
+          "url": "https://faden-com.vercel.app",
+          "logo": "https://faden-com.vercel.app/FADEN.jpg",
+          "sameAs": [
+            "https://www.instagram.com/hoodieheavan_?igsh=dzYzdThlY3VvNG9r",
+            "https://www.facebook.com/share/1AditKD6ZD/?mibextid=wwXIfr",
+            "https://wa.me/923106429244"
+          ]
+        }}
+      />
       {/* Hero Section - Monochrome */}
       <section className="relative bg-black dark:bg-black py-32 overflow-hidden">
         {/* Geometric Background Elements */}
