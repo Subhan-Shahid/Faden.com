@@ -39,7 +39,7 @@ const PageTransition = ({ children }) => {
       }`
     }>
       {isAnimating && (
-        <div className="pointer-events-none absolute inset-0 z-20 flex items-center justify-center bg-gray-50/80 dark:bg-gray-900/80">
+        <div className="pointer-events-none absolute inset-0 z-20 flex items-center justify-center bg-gray-50/80 dark:bg-black/80">
           <div className="h-8 w-8 rounded-full border-2 border-gray-300 border-t-gray-700 dark:border-gray-700 dark:border-t-white animate-spin" />
         </div>
       )}
@@ -67,7 +67,7 @@ function App() {
           ${!showIntro ? 'opacity-100' : 'opacity-0'}
         `}>
           <Router>
-            <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
+            <div className="min-h-screen bg-gray-50 dark:bg-black transition-colors duration-200">
               <Navbar />
               <PageTransition>
                 <Routes>
