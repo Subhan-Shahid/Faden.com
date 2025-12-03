@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const Logo = ({ className = "w-8 h-8", animated = true }) => {
+const Logo = ({ className = "w-8 h-8", animated = true, src = "/slideshow/F A D E N (A2 (Landscape)).png" }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -28,9 +28,9 @@ const Logo = ({ className = "w-8 h-8", animated = true }) => {
       
       {/* Logo image with animations */}
       <img 
-        src="/FADEN.jpg" 
+        src={src} 
         alt="Faden Logo" 
-        className={`w-full h-full object-contain transition-all duration-700 ease-out transform ${
+        className={`w-full h-full object-contain rounded-2xl transition-all duration-700 ease-out transform ${
           animated ? `
             ${isVisible ? 'opacity-100 scale-100 rotate-0' : 'opacity-0 scale-75 -rotate-12'}
             hover:scale-110 hover:rotate-3 hover:brightness-110

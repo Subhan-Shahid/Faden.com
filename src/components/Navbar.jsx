@@ -3,7 +3,7 @@ import { Link, useLocation, useSearchParams } from 'react-router-dom';
 import { ShoppingCart, Sun, Moon, Menu, X } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import { useTheme } from '../context/ThemeContext';
-import FashionLogo from './FashionLogo';
+import Logo from './Logo';
 
 const Navbar = () => {
   const { getCartItemsCount } = useCart();
@@ -48,7 +48,7 @@ const Navbar = () => {
             to="/"
             className="flex items-center space-x-3 text-xl font-bold group"
           >
-            <FashionLogo
+            <Logo
               className="w-10 h-10 transition-transform duration-300 group-hover:scale-110"
               animated={true}
             />

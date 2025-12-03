@@ -14,7 +14,7 @@ const HeroSlideshow = () => {
         primaryHref: '#products',
         secondaryLabel: 'View Bestsellers',
         secondaryHref: '#products',
-        image: '/slideshow/FADEN (A2 (Landscape)).png',
+        image: '/slideshow/F A D E N (A2 (Landscape)).png',
         tag: 'New drops live now',
         focusPosition: 'center 55%'
       },
@@ -31,7 +31,7 @@ const HeroSlideshow = () => {
         secondaryHref: '#products',
         image: '/slideshow/Gemini_Generated_Image_wco5hywco5hywco5.png',
         tag: 'Most loved fits',
-        focusPosition: 'center 20%'
+        focusPosition: 'center 10%'
       },
       {
         id: 3,
@@ -44,8 +44,23 @@ const HeroSlideshow = () => {
         primaryHref: '/?category=Co-ord Sets',
         secondaryLabel: 'Browse Collection',
         secondaryHref: '#products',
-        image: '/slideshow/Hailuo_Image_made this image a proffesional_452199663744888833.png',
+        image: '/slideshow/3rd slide.png',
         tag: 'Limited stock available',
+        focusPosition: 'center 55%'
+      },
+      {
+        id: 4,
+        eyebrow: 'Premium Streetwear',
+        titleLine1: 'Elevate Your',
+        titleLine2: 'Everyday Fits',
+        description:
+          'Explore curated hoodies, tees, and co-ord sets designed for comfort, quality, and modern minimal style.',
+        primaryLabel: 'Shop Collection',
+        primaryHref: '#products',
+        secondaryLabel: 'View Bestsellers',
+        secondaryHref: '#products',
+        image: '/slideshow/Gemini_Generated_Image_y1465ey1465ey146.png',
+        tag: 'New drops live now',
         focusPosition: 'center 55%'
       }
     ],
@@ -99,7 +114,7 @@ const HeroSlideshow = () => {
   const activeSlide = slides[currentIndex];
 
   return (
-    <section className="relative bg-black dark:bg-black overflow-hidden pt-0 pb-16 sm:pt-16 sm:pb-24">
+    <section className="relative bg-black dark:bg-black overflow-hidden pt-0 pb-0 sm:pt-0 sm:pb-0">
       <div className="absolute inset-0 overflow-hidden">
         <div
           className="absolute inset-0 opacity-10"
@@ -152,7 +167,9 @@ const HeroSlideshow = () => {
                       : 'object-cover'
                   }`}
                   style={{
-                    objectPosition: slide.focusPosition || 'center top'
+                    objectPosition: isLargeScreen
+                      ? slide.focusPosition || 'center top'
+                      : 'center center'
                   }}
                   loading="lazy"
                 />

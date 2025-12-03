@@ -82,7 +82,10 @@ const SplashScreen = ({ onComplete }) => {
           
           {/* Logo */}
           <div className="relative">
-            <Logo className="w-24 h-24 md:w-32 md:h-32" />
+            <Logo
+              className="w-24 h-24 md:w-32 md:h-32"
+              src="/slideshow/F A D E N (A2 (Landscape)).png"
+            />
           </div>
           
           {/* Rotating ring around logo */}
