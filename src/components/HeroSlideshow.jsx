@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
+import ScrollReveal from './ScrollReveal';
 
 const HeroSlideshow = () => {
   const slides = useMemo(
@@ -155,7 +156,8 @@ const HeroSlideshow = () => {
                   style={{
                     backgroundImage: `url(${slide.image})`,
                     backgroundSize: 'cover',
-                    backgroundPosition: 'center'
+                    backgroundPosition: 'center',
+                    backgroundAttachment: isLargeScreen ? 'fixed' : 'scroll'
                   }}
                 />
                 <img
@@ -180,7 +182,7 @@ const HeroSlideshow = () => {
 
           {/* Text overlay */}
           <div className="absolute inset-0 flex items-end pb-16 sm:items-center sm:pb-0 justify-center lg:justify-start px-4 sm:px-10 lg:px-24">
-            <div className="max-w-2xl text-center lg:text-left space-y-4 sm:space-y-6 animate-slide-up">
+            <ScrollReveal className="max-w-2xl text-center lg:text-left space-y-4 sm:space-y-6 animate-slide-up">
               <div className="hidden sm:inline-flex items-center px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full border border-white/10 bg-white/5 text-[0.6rem] sm:text-xs font-medium uppercase tracking-[0.25em] text-gray-300 backdrop-blur-sm">
                 <span className="w-1.5 h-1.5 rounded-full bg-white mr-2" />
                 {activeSlide.eyebrow}
@@ -212,7 +214,7 @@ const HeroSlideshow = () => {
                 <span className="h-px w-8 bg-white/20" />
                 <span>{String(currentIndex + 1).padStart(2, '0')} / {String(slides.length).padStart(2, '0')}</span>
               </div>
-            </div>
+            </ScrollReveal>
           </div>
 
           <div className="absolute bottom-4 left-0 right-0 hidden sm:flex items-center justify-between px-4 sm:px-6 lg:px-10 z-10">

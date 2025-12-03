@@ -5,6 +5,7 @@ import { useCart } from '../context/CartContext';
 import { products } from '../data/products';
 import ProductCard from '../components/ProductCard';
 import SEO from '../components/SEO';
+import ScrollReveal from '../components/ScrollReveal';
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -133,7 +134,7 @@ const ProductDetails = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
           {/* Product Image */}
-          <div className="relative">
+          <ScrollReveal className="relative">
             <div className="aspect-square rounded-2xl overflow-hidden bg-gray-100 dark:bg-gray-800">
               <img
                 src={product.image}
@@ -148,10 +149,10 @@ const ProductDetails = () => {
                 </div>
               )}
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* Product Info */}
-          <div className="space-y-6">
+          <ScrollReveal delay={100} className="space-y-6">
             <div>
               <div className="flex items-center justify-between mb-2">
                 <span className="text-sm font-medium text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30 px-3 py-1 rounded-full">
@@ -374,20 +375,30 @@ const ProductDetails = () => {
                 </div>
               </div>
             )}
-          </div>
+          </ScrollReveal>
         </div>
 
         {/* Related Products */}
         {relatedProducts.length > 0 && (
           <section>
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
-              Related Products
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {relatedProducts.map(relatedProduct => (
-                <ProductCard key={relatedProduct.id} product={relatedProduct} />
-              ))}
-            </div>
+            <ScrollReveal>
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
+                Related Products
+              </h2>
+            </ScrollReveal>
+            <ScrollReveal delay={100}>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {relatedProducts.map((relatedProduct, index) => (
+                  <ScrollReveal
+                    key={relatedProduct.id}
+                    variant="zoom-in"
+                    delay={index * 60}
+                  >
+                    <ProductCard product={relatedProduct} />
+                  </ScrollReveal>
+                ))}
+              </div>
+            </ScrollReveal>
           </section>
         )}
       </div>

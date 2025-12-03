@@ -4,6 +4,7 @@ import { Search, Filter } from 'lucide-react';
 import ProductCard from '../components/ProductCard';
 import SEO from '../components/SEO';
 import HeroSlideshow from '../components/HeroSlideshow';
+import ScrollReveal from '../components/ScrollReveal';
 import { products, categories } from '../data/products';
 
 const Home = () => {
@@ -83,7 +84,7 @@ const Home = () => {
         className="py-8 bg-gray-50/50 dark:bg-gray-900/50 backdrop-blur-sm border-b border-gray-200/50 dark:border-gray-800/50"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
+          <ScrollReveal className="flex flex-col lg:flex-row gap-4 items-center justify-between">
             {/* Search */}
             <div className="relative flex-1 max-w-md">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -125,12 +126,12 @@ const Home = () => {
                 <option value="rating">Highest Rated</option>
               </select>
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* Results count */}
-          <div className="mt-4 text-sm text-gray-600 dark:text-gray-400">
+          <ScrollReveal delay={100} className="mt-4 text-sm text-gray-600 dark:text-gray-400">
             Showing {filteredAndSortedProducts.length} of {products.length} products
-          </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -140,13 +141,13 @@ const Home = () => {
           {filteredAndSortedProducts.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {filteredAndSortedProducts.map((product, index) => (
-                <div
+                <ScrollReveal
                   key={product.id}
-                  className="animate-scale-in"
-                  style={{ animationDelay: `${index * 0.05}s` }}
+                  variant="zoom-in"
+                  delay={index * 60}
                 >
                   <ProductCard product={product} />
-                </div>
+                </ScrollReveal>
               ))}
             </div>
           ) : (
